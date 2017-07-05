@@ -17,4 +17,9 @@ public class HelloController {
 	public String helloName(@PathVariable String name) {
 		return "Hello " + name + ", I hope all is well today.";
 	}
+	
+	@RequestMapping(value = "/nohello/{name}", method = RequestMethod.GET)
+	public String goodBye(@PathVariable String name) {
+		return "Goodbye " + name + ", I hope your application has many viruses and crashes!";
+	}
 }
